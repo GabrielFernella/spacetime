@@ -3,3 +3,5 @@
 
 
 npx expo start --tunnel
+
+51-26
