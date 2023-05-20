@@ -34,21 +34,22 @@ export default function App() {
     })
 
     const { token } = response.data
+    // console.log('Token', token)
 
     await SecureStore.setItemAsync('token', token)
 
-    router.push('/memories')
+    router.push('/memories') // encaminha para a tela especificada
   }
 
   useEffect(() => {
-    /* console.log(
-      'response',
-      makeRedirectUri({
-        scheme: 'nlwspacetime',
-      }),
-    ) */
+    // console.log(
+    //   'response',
+    //   makeRedirectUri({
+    //     scheme: 'nlwspacetime',
+    //   }),
+    // )
 
-    console.log(response)
+    // console.log(response)
 
     if (response?.type === 'success') {
       const { code } = response.params
