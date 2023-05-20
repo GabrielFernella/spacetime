@@ -11,7 +11,7 @@ const discovery = {
   authorizationEndpoint: 'https://github.com/login/oauth/authorize',
   tokenEndpoint: 'https://github.com/login/oauth/access_token',
   revocationEndpoint:
-    'https://github.com/settings/connections/applications/d26f194cc5d5132a51be',
+    'https://github.com/settings/connections/applications/53d648bd19572a2f0960',
 }
 
 export default function App() {
@@ -19,7 +19,7 @@ export default function App() {
 
   const [, response, signInWithGithub] = useAuthRequest(
     {
-      clientId: 'd26f194cc5d5132a51be',
+      clientId: '53d648bd19572a2f0960',
       scopes: ['identity'],
       redirectUri: makeRedirectUri({
         scheme: 'nlwspacetime',
@@ -41,12 +41,14 @@ export default function App() {
   }
 
   useEffect(() => {
-    // console.log(
-    //   'response',
-    //   makeRedirectUri({
-    //     scheme: 'nlwspacetime',
-    //   }),
-    // )
+    /* console.log(
+      'response',
+      makeRedirectUri({
+        scheme: 'nlwspacetime',
+      }),
+    ) */
+
+    console.log(response)
 
     if (response?.type === 'success') {
       const { code } = response.params

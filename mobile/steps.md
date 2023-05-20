@@ -3,5 +3,4 @@
 
 
 npx expo start --tunnel
-
-51-26
+npx expo start --clear
