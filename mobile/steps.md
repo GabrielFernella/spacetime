@@ -4,3 +4,4 @@
 
 npx expo start --tunnel
 npx expo start --clear
+1:07
